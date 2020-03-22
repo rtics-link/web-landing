@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <title>RTICS</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #fafafa;
+        width: 100%;
+      }
+
+      header {
+        padding-top: 34px;
+        padding-left: 70px;
+      }
+
+      header a {
+        float: left;
+      }
+
+      #logo {
+        width: 128px;
+        height: 32px;
+      }
+
+      nav {
+        float: right;
+        text-decoration: none;
+        margin-right: 184px;
+        width: 732px;
+        height: 38px;
+      }
+
+      nav a {
+        float: right;
+        text-decoration: none;
+        font-weight: 800;
+        font-family: "Apple SD Gothic Neo";
+        color: #414144;
+        font-size: 14px;
+        text-align: right;
+        margin-right: 56px;
+      }
+
+      section {
+        margin-left: 170px;
+        padding-top: 185px;
+        width: 500px;
+        height: 55px;
+        font-weight: 800;
+        color: #333333;
+        font-family: "Apple SD Gothic Neo";
+        font-weight: 800;
+        font-size: 40px;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 1.47px;
+        color: #333333;
+      }
+
+      article {
+        margin-top: 64px;
+        width: 720px;
+        height: 160px;
+        font-family: "Noto Sans";
+        font-size: 18px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.78;
+        letter-spacing: 0.57px;
+        color: #333333;
+      }
+
+      a {
+        color: #333333;
+      }
+
+      footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 233px;
+        width: 100%;
+        background-color: #302f33;
+        opacity: 0.85;
+        display: none;
+      }
+
+      #footershadow {
+        display: none;
+        background-color: #302f33;
+        opacity: 0.85;
+      }
+
+      footer {
+        display: none;
+      }
+
+      .normal {
+        font-family: "Noto Sans";
+        font-size: 16px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.44;
+        letter-spacing: -0.45px;
+        color: #383a3f;
+      }
+
+      .button {
+        float: left;
+        margin-left: 60px;
+        width: 166px;
+        height: 40px;
+        border-radius: 24px;
+        background-color: #5852ff;
+      }
+
+      .button span {
+        top: 0;
+        bottom: 0;
+        margin-top: -3px;
+        line-height: 48px;
+        display: inline-block;
+        font-family: Helvetica;
+        width: 166px;
+        height: 40px;
+        font-size: 15px;
+        font-weight: bold;
+        font-stretch: normal;
+        text-align: center;
+        vertical-align: middle;
+        font-style: normal;
+        letter-spacing: 0.51px;
+        color: #ffffff;
+      }
+
+      #buttons {
+        margin-top: 166px;
+        left: 0;
+        right: 0;
+        margin-right: auto;
+        margin-left: auto;
+        width: 620px;
+        font-size: 18px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.45px;
+        color: #383a3f;
+      }
+
+      #button1 {
+        color: white;
+        float: left;
+        width: 258px;
+        height: 48px;
+        border-radius: 24px;
+        background-color: #a0a0a0;
+      }
+
+      #button2 {
+        float: left;
+        margin-left: 60px;
+        width: 259px;
+        height: 48px;
+        border-radius: 24px;
+        background-color: #5852ff;
+      }
+
+      #buttons span {
+        top: 0;
+        bottom: 0;
+        /* margin: auto; */
+        line-height: 48px;
+        display: inline-block;
+        font-family: Helvetica;
+        width: 263px;
+        height: 48px;
+        font-size: 15px;
+        font-weight: bold;
+        font-stretch: normal;
+        text-align: center;
+        vertical-align: middle;
+        font-style: normal;
+        letter-spacing: 0.51px;
+        color: #ffffff;
+      }
+
+      .fourty {
+        width: 470px;
+        height: 55px;
+        font-family: Avenir;
+        font-size: 40px;
+        font-weight: 900;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #383a3f;
+      }
+
+      .big {
+        /* font-family: Montserrat; */
+        font-size: 56px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 0.96;
+        letter-spacing: -0.73px;
+        color: #383a3f;
+      }
+
+      .normal {
+        font-size: 42px;
+        font-weight: 200;
+        line-height: 1.9;
+        letter-spacing: -0.55px;
+      }
+
+      .explain {
+        width: 549px;
+        height: 49px;
+        /* font-family: NotoSans; */
+        font-size: 16px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.44;
+        letter-spacing: -0.45px;
+        color: #383a3f;
+        margin-top: 32px;
+      }
+
+      .dot {
+        color: #5852ff;
+        font-size: 90px;
+        float: left;
+      }
+
+      .fourty {
+        width: 100%;
+        /* height: 49px; */
+        /* font-family: Montserrat; */
+        font-size: 40px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: -0.38px;
+        color: #383a3f;
+      }
+
+      #second {
+        margin-top: 350px;
+        font-size: 30px;
+        font-weight: 200;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: -0.38px;
+        color: #383a3f;
+      }
+
+      article {
+        width: 1280px;
+      }
+
+      #second .normal {
+        width: 600px;
+        height: 75px;
+        /* font-family: NotoSans; */
+        font-size: 16px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.44;
+        letter-spacing: -0.45px;
+        color: #383a3f;
+      }
+
+      #second .title {
+        width: 800px;
+      }
+
+      #second .button {
+        margin-top: 34px;
+      }
+
+      #customers .fourty {
+        text-align: center;
+        width: 100%;
+      }
+
+      #key .fourty {
+        text-align: center;
+        width: 100%;
+      }
+
+      #customers .explain {
+        text-align: center;
+        width: 100%;
+        /* font-family: NotoSans; */
+        font-size: 17.5px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.7px;
+        text-align: center;
+        color: #383a3f;
+      }
+
+      #key .fourty {
+        text-align: center;
+        width: 100%;
+      }
+
+      .columns {
+        width: 100%;
+        height: auto;
+        margin-top: 66px;
+      }
+
+      .column {
+        width: 25%;
+        padding-right: 80px;
+        height: 400px;
+        float: left;
+      }
+
+      .column .ct {
+        color: #383a3f;
+        /* font-family: Montserrat; */
+        font-size: 25px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.12;
+        letter-spacing: 0.4px;
+        color: #383a3f;
+      }
+
+      .column .ci {
+        margin-top: 22px;
+      }
+
+      #customers .buttons {
+        margin-top: 66px;
+        width: 100%;
+        margin-top: 166px;
+        left: 0;
+        right: 0;
+        margin-right: auto;
+        margin-left: auto;
+        width: 620px;
+        font-size: 18px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.45px;
+        color: #383a3f;
+      }
+
+      .card {
+        float: left;
+        width: 25%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <a href="">
+        <img src="./img/logo.svg" alt="RTICS Logo" id="logo" />
+      </a>
+      <nav>
+        <a href="">ABOUT US</a>
+        <a href="">PRODUCT</a>
+        <a href="">PRICING</a>
+        <a href="">BLOG</a>
+        <a href="">CONTACT US</a>
+      </nav>
+    </header>
+    <section class="left">
+      <article id="first">
+        <div>
+          <span class="big"> <br />TRACK YOUR </span>
+          <span class="normal"> <br />CITATION IMPACT, </span>
+          <span class="big"> <br />MANAGE YOUR </span>
+          <span class="normal">
+            <br />RESEARCH PERFORMANCE
+            <span class="dot">
+              .
+            </span>
+          </span>
+        </div>
+        <div class="explain">
+          Track your trails and search your path with RTICS. Find out where you
+          came from, where you are, and where to go.
+        </div>
+        <div class="button">
+          <span>
+            About Us
+          </span>
+        </div>
+      </article>
+      <article id="second">
+        <div>
+          <div class="title">
+            <span class="fourty">
+              GPS
+            </span>
+            <span>
+              FOR RESEARCHER
+            </span>
+          </div>
+          <div class="normal">
+            Track your trails and search your path with RTICS.<br />
+            Find out where you came from,<br />
+            where you are, and where to go.<br />
+          </div>
+          <div class="button">
+            <span>
+              PRODUCT
+            </span>
+          </div>
+        </div>
+      </article>
+      <article id="customers">
+        <div class="fourty">
+          CUSTOMERS
+        </div>
+        <div class="explain">
+          RTICS is a network data management tool and a discovery tool for
+          research groups.
+        </div>
+        <div class="columns">
+          <div class="column">
+            <div class="ct">
+              Organize and track<br />your research<br />performance
+            </div>
+            <div class="ci">
+              RTICS automatically organizes your<br />works and measures your
+              research<br />performances. <br /><br />
+              RTICS shows your past co-research<br />lists and their
+              performances.
+            </div>
+          </div>
+          <div class="column">
+            <div class="ct">Build and shape your<br />research network</div>
+            <div class="ci">
+              RTICS shows your researcher network.
+              <br />
+              <br />
+              RTICS recommends you possible co-<br />researchers, and show how
+              their<br />research topics are similar to yours.
+              <br />
+              <br />
+              RTICS analyzes fields you are interested<br />in and recommends
+              important and<br />emerging topics.
+            </div>
+          </div>
+          <div class="column">
+            <div class="ct">
+              Stay updated with important or emerging academic trends
+            </div>
+            <div class="ci">
+              RTICS analyzes academic fields and shows academic trends and
+              provides insights from analysis results.
+              <br />
+              RTICS tracks your researches and shows your past research trends.
+            </div>
+          </div>
+        </div>
+        <div id="buttons">
+          <div id="button1" class="button">
+            <span>
+              REQUEST PRODUCT
+            </span>
+          </div>
+          <div id="button2" class="button">
+            <span>
+              EXPLORE USE CASES
+            </span>
+          </div>
+        </div>
+      </article>
+      <article id="key">
+        <div class="fourty">
+          KEY FEATURES
+        </div>
+        <div>
+          <span class="card">
+            Manage your<br />
+            team performance
+          </span>
+          <span class="card">
+            Manage your<br />
+            individual performance
+          </span>
+          <span class="card">
+            Measure and track your<br />
+            citation impact
+          </span>
+          <span class="card">
+            Find out your next<br />
+            co-researcher
+          </span>
+          <span class="card">
+            Track your collaborative<br />
+            research performances
+          </span>
+          <span class="card">
+            See who is leading<br />
+            research trends
+          </span>
+          <span class="card">
+            Get hot, important, emerging<br />
+            research topics curated to your needs
+          </span>
+          <span class="card">
+            Stay updated with recent<br />
+            research trends
+          </span>
+          <span class="card">
+            See what funds are<br />
+            investing to your field
+          </span>
+        </div>
+      </article>
+    </section>
+    <section class="center">
+      <div></div>
+    </section>
+    <footer>
+      <div id="footershadow"></div>
+    </footer>
+  </body>
+</html>
