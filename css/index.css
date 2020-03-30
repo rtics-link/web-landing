@@ -40,6 +40,7 @@ nav a {
 
 section {
   margin-left: 170px;
+  margin-right: 170px;
   padding-top: 185px;
   width: 500px;
   height: 55px;
@@ -59,7 +60,7 @@ article {
   margin-top: 64px;
   width: 720px;
   height: 160px;
-  font-family: 'Noto Sans';
+  font-family: "Noto Sans";
   font-size: 18px;
   font-weight: normal;
   font-stretch: normal;
@@ -74,19 +75,49 @@ a {
 }
 
 footer {
+  font-family: "Apple SD Gothic Neo";
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 233px;
+  top: 3000px;
   width: 100%;
+  height: 233px;
   background-color: #302f33;
   opacity: 0.85;
-  display: none;
+  display: inline-block;
+}
+
+footer img {
+  width: 136px;
+  margin-left: 156px;
+  margin-top: 63px;
+  position: absolute;
+  left: 0;
+  display: inline-block;
+}
+
+#footernav {
+  font-size: 14px;
+  position: absolute;
+  right: 0px;
+  margin-top: 63px;
+  color: white;
+  margin-right: 60px;
+  display: inline-block;
+  width: auto;
+}
+
+#footernav span {
+  margin-right: 56px;
 }
 
 #footershadow {
   display: none;
   background-color: #302f33;
   opacity: 0.85;
+}
+
+#copyright {
+  font-size: 13px;
+  color: white;
+  margin-top: 123px;
+  margin-left: 156px;
 }
