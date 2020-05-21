@@ -11,7 +11,7 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: nakilon/git-to-gcs@1
+      - name: Git to GCS
+        uses: nakilon/git-to-gcs@1
         with:
           secrets: ${{ secrets.secrets }}
