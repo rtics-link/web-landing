@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./index.css">
+  <title>Pricing</title>
+  <style>
+    input {
+      display: none;
+    }
+
+    body div {
+      text-align: center;
+      align-items: center;
+      width: 100%;
+      font-family: "Noto Sans";
+    }
+
+    #title {
+      margin-top: 200px;
+    }
+
+    .big {
+      font-family: Avenir;
+      font-size: 40px;
+      font-weight: 900;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: 0.27px;
+      text-align: center;
+      color: #383a3f;
+    }
+
+    .huge {
+      font-size: 50px;
+      letter-spacing: 0.33px;
+    }
+
+    #explain {
+      margin-top: 42px;
+      font-family: "Noto Sans";
+      font-size: 16px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.44;
+      letter-spacing: 0.55px;
+      text-align: center;
+      color: #383a3f;
+    }
+
+    #pricetag {
+      margin-top: 56px;
+      height: 70px;
+      color: #5852ff;
+      font-family: Avenir;
+      font-size: 60px;
+      font-weight: 900;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: center;
+      color: #5852ff;
+    }
+
+    #priceex {
+      margin-top: 14px;
+      height: 37px;
+      font-family: Avenir;
+      font-size: 24px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: center;
+      color: #383a3f;
+    }
+
+    #checkboxes {
+      margin-top: 66px;
+      left: 0;
+      right: 0;
+      margin-right: auto;
+      margin-left: auto;
+      width: 620px;
+      font-size: 18px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: 0.45px;
+      color: #383a3f;
+    }
+
+    .checkbox {
+      text-align: left;
+      margin-top: 26px;
+      font-size: 18px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: 0.45px;
+      color: #383a3f;
+    }
+
+    .cb {
+      float: left;
+      margin-right: 10px;
+      width: 30px;
+      height: 30px;
+      border-radius: 7px;
+      box-shadow: -1px 1px 10px 0 rgba(88, 82, 255, 0.2);
+      background-color: #ffffff;
+    }
+
+    #learnmore {
+      margin-top: 25px;
+      font-size: 16px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: 0.4px;
+      text-align: center;
+      color: #383a3f;
+      text-decoration: underline;
+    }
+
+    #requestTitle {
+      margin-top: 107px;
+      text-align: left;
+      width: 618px;
+      height: 48px;
+      left: 0;
+      right: 0;
+      margin-right: auto;
+      margin-left: auto;
+      font-size: 24px;
+      font-weight: 800;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: 0.6px;
+      color: #383a3f;
+    }
+
+    #request {
+      margin-top: 27px;
+      width: 576px;
+      height: 63px;
+      border-radius: 31.5px;
+      box-shadow: -3px 3px 15px 0 rgba(88, 82, 255, 0.15);
+      background-color: #ffffff;
+      border: none;
+    }
+
+    form {
+      width: 359px;
+      height: 48px;
+      font-family: Avenir;
+      font-size: 18px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #9b9b9b;
+    }
+
+    #buttons {
+      margin-top: 166px;
+      left: 0;
+      right: 0;
+      margin-right: auto;
+      margin-left: auto;
+      width: 620px;
+      font-size: 18px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: 0.45px;
+      color: #383a3f;
+    }
+
+    #button1 {
+      color: white;
+      float: left;
+      width: 258px;
+      height: 48px;
+      border-radius: 24px;
+      background-color: #a0a0a0;
+    }
+
+    #button2 {
+      float: left;
+      margin-left: 60px;
+      width: 259px;
+      height: 48px;
+      border-radius: 24px;
+      background-color: #5852ff;
+    }
+
+    #buttons span {
+      top: 0;
+      bottom: 0;
+      /* margin: auto; */
+      line-height: 48px;
+      display: inline-block;
+      font-family: Helvetica;
+      width: 263px;
+      height: 48px;
+      font-size: 15px;
+      font-weight: bold;
+      font-stretch: normal;
+      text-align: center;
+      vertical-align: middle;
+      font-style: normal;
+      letter-spacing: 0.51px;
+      color: #ffffff;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a href="">
+      <img src="./img/logo.svg" alt="RTICS Logo" id="logo">
+    </a>
+    <nav>
+      <a href="">ABOUT US</a>
+      <a href="">PRODUCT</a>
+      <a href="">PRICING</a>
+      <a href="">BLOG</a>
+      <a href="">CONTACT US</a>
+    </nav>
+  </header>
+  <div>
+    <div id="title">
+      <div class="big">REQUEST <span class="huge">RTICS</span> PRODUCT</div>
+    </div>
+    <div id="explain">
+      RTICS is for research groups of more than one researcher.
+      <br><br>
+      Every researcher in your group is required to subscribe to a single license key. <br>
+      Submit your email address below, and get a detailed pricing guide <br>
+      with a questionnaire on your specific needs.
+    </div>
+    <div id="pricetag">
+      $199
+    </div>
+    <div id="priceex">
+      / individual researcher / month
+    </div>
+    <div id="checkboxes">
+      <div class="checkbox">
+        <input type="checkbox" name="chk_info" value="CSS" checked="checked">
+        <div class="cb"></div>
+        For research groups of more than one researcher
+      </div>
+      <div class="checkbox">
+        <input type="checkbox" name="chk_info" value="CSS" checked="checked">
+        <div class="cb"></div>
+
+        Research impact analysis tool
+      </div>
+      <div class="checkbox">
+        <input type="checkbox" name="chk_info" value="CSS" checked="checked">
+        <div class="cb"></div>
+
+        Stay updated with the most trending research insights
+      </div>
+      <div class="checkbox">
+        <input type="checkbox" name="chk_info" value="CSS" checked="checked">
+        <div class="cb"></div>
+        One year license per individual researcher
+      </div>
+    </div>
+    <div id="learnmore">
+      Learn more about RTICS
+    </div>
+    <div id="requestTitle">
+      REQUEST PRODUCT
+      <div id="request">
+        <form>
+          <input type="text" name="name" label="Submit your email address">
+        </form>
+      </div>
+    </div>
+    <div id="buttons">
+      <div id="button1">
+        <span>
+          REQUEST PRODUCT
+        </span>
+      </div>
+      <div id="button2">
+        <span>
+          EXPLORE USE CASES
+        </span>
+      </div>
+    </div>
+  </div>
+  <section>
+    <article>
+    </article>
+  </section>
+  <footer>
+    <div id="footershadow"></div>
+  </footer>
+</body>
+
+</html>

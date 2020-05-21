@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/index.css" />
+    <style>
+      /* slideshow style start */
+      /*  */
+      * {
+        box-sizing: border-box;
+      }
+
+      /* Slideshow container */
+      .slideshow-container {
+        max-width: 2000px;
+        position: relative;
+        margin: auto;
+      }
+
+      /* Hide the images by default */
+      .mySlides {
+        display: none;
+      }
+
+      /* Position the "next button" to the right */
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+
+      /* On hover, add a black background color with a little bit see-through */
+      .prev:hover,
+      .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+
+      /* The dots/bullets/indicators */
+      .dot {
+        cursor: pointer;
+        width: 10px;
+        height: 10px;
+        background-color: #383a3f;
+        margin: 0 2px;
+        border-radius: 50%;
+        display: none;
+        /* display: inline-block; */
+        transition: all 0.15s ease-out;
+      }
+
+      .active,
+      .dot:hover {
+        width: 20px;
+        height: 20px;
+        background-color: #5852ff;
+      }
+
+      /* Fading animation */
+      .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 0.5s;
+        animation-name: fade;
+        animation-duration: 0.5s;
+      }
+
+      @-webkit-keyframes fade {
+        from {
+          opacity: 0.4;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fade {
+        from {
+          opacity: 0.4;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      /* slideshow style end */
+      /*  */
+      body {
+        background-color: #fff;
+      }
+
+      .text {
+        font-size: 16px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.44;
+        letter-spacing: -0.45px;
+        color: #383a3f;
+      }
+
+      h1,
+      h2 {
+        margin: 0;
+        padding: 0;
+      }
+
+      .toptitle {
+        width: 826px;
+        height: 262px;
+      }
+
+      section .top {
+        width: 549px;
+        height: 49px;
+        font-size: 16px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.44;
+        letter-spacing: -0.45px;
+        color: #383a3f;
+      }
+
+      .toptitle h1 {
+        font-size: 56px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 0.96;
+        letter-spacing: -0.73px;
+        color: #383a3f;
+      }
+      .toptitle h2,
+      .toptitle span {
+        font-size: 42px;
+        font-weight: 200;
+        line-height: 1.9;
+        letter-spacing: -0.55px;
+      }
+
+      .punctuation {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: #5852ff;
+        display: inline-block;
+      }
+
+      .top img {
+        width: 400px;
+        height: auto;
+        right: 200px;
+        top: 123px;
+        position: absolute;
+        z-index: -1;
+      }
+
+      .button {
+        width: 258px;
+        height: 48px;
+        border-radius: 24px;
+        background-color: #5852ff;
+        display: inline-block;
+      }
+
+      .button span {
+        color: white;
+        top: 0;
+        bottom: 0;
+        /* margin: auto; */
+        line-height: 48px;
+        display: inline-block;
+        font-family: Helvetica;
+        width: 263px;
+        height: 48px;
+        font-size: 15px;
+        font-weight: bold;
+        font-stretch: normal;
+        text-align: center;
+        vertical-align: middle;
+        font-style: normal;
+        letter-spacing: 0.51px;
+      }
+
+      #gpstext {
+        position: absolute;
+        right: 250px;
+        top: 780px;
+      }
+
+      #gps img {
+        display: inline-block;
+        width: 400px;
+        height: auto;
+      }
+
+      #gps h1 {
+        font-size: 40px;
+        font-weight: 600;
+        letter-spacing: -0.5px;
+        font-size: 50px;
+        font-weight: 200;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: -0.38px;
+        color: #383a3f;
+      }
+
+      #gps h1 span {
+        font-size: 30px;
+        font-weight: 200;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: -0.38px;
+        color: #383a3f;
+      }
+
+      #gps .text {
+        margin-top: 30px;
+      }
+
+      #customers {
+        width: auto;
+        text-align: center;
+      }
+
+      #customers h1 {
+        width: auto;
+        font-size: 40px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #383a3f;
+      }
+
+      #customers h3 {
+        font-size: 17.5px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.7px;
+        text-align: center;
+        color: #383a3f;
+      }
+
+      .customercard {
+        display: inline-block;
+        width: 320px;
+        height: auto;
+        text-align: left;
+        position: relative;
+      }
+
+      .customercard h2 {
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        font-size: 25px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.12;
+        letter-spacing: 0.4px;
+        color: #383a3f;
+      }
+
+      .customercard .text {
+        position: absolute;
+        top: 0;
+      }
+
+      #customerbuttons {
+        width: auto;
+        text-align: center;
+      }
+
+      #customerbuttons .button {
+        margin-left: 30px;
+        margin-right: 30px;
+      }
+
+      #keyfeatures {
+        width: auto;
+        text-align: center;
+      }
+
+      #keyfeatures h1 {
+        width: auto;
+        font-size: 40px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #383a3f;
+      }
+
+      .keyfeaturescard {
+        width: 32%;
+        height: auto;
+        display: inline-block;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+
+      .keyfeaturescard img {
+        width: 50%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+      <a href="" style="float:left; margin-left: 70px;">
+        <img src="./img/logo.svg" alt="RTICS Logo" id="logo" />
+      </a>
+      <nav>
+        <a class='hn' href="./contact.html">CONTACT US</a>        
+        <a class='hn' href="http://blog.rtics.link">BLOG</a>
+        <a class='hn' href="./pricing.html">PRICING</a>
+        <a class='hn' href="">PRODUCT</a>
+        <a class='hn' href="./aboutus.html">ABOUT US</a>              
+      </nav>
+    </header>
+
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+      <!-- Full-width images with number and caption text -->
+      <div class="mySlides fade">
+        <section class="top">
+          <div class="toptexts">
+            <div class="toptitle">
+              <h1>TRACK YOUR</h1>
+              <h2>CITATION IMPACT,</h2>
+              <h1>MANAGE YOUR</h1>
+              <h2>
+                RESEARCH PERFORMANCE
+                <div class="punctuation"></div>
+              </h2>
+            </div>
+            <div class="text">
+              Track your trails and search your path with RTICS.
+              <br />
+              Find out where you came from, where you are, and where to go.
+            </div>
+          </div>
+          <img src="img/top-track.png" alt="track your performance" />
+          <div id="topbutton" class="button" style="margin-top: 54px;">
+            <span>
+              About Us
+            </span>
+          </div>
+        </section>
+      </div>
+
+      <div class="mySlides fade">
+        <section class="top">
+          <div class="toptexts">
+            <div class="toptitle">
+              <h1>DISCOVER <span>THE</span></h1>
+              <h2>UNKNOWN SPACE OF THE</h2>
+              <h1>
+                ACADEMIC WORLD
+                <div class="punctuation"></div>
+              </h1>
+            </div>
+            <div class="text">
+              Our goal is to reveal the hidden insights from academic trends.
+              <br />
+              We help to uplift the academic stakeholders to the elevated level
+              of research analytics.
+            </div>
+          </div>
+          <img src="img/top-discover.png" alt="discover academic world" />
+          <div id="topbutton" class="button" style="margin-top: 54px;">
+            <span>
+              PRODUCT KEY FEATURES
+            </span>
+          </div>
+        </section>
+      </div>
+    </div>
+    <br />
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+    </div>
+    <!-- 슬라이드 쇼 초기화 -->
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      // Next/previous controls
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      // Thumbnail image controls
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+
+    <section id="gps" style="margin-top: 321px;">
+      <img src="img/GPS.png" alt="gps for researchers" />
+      <div id="gpstext">
+        <div>
+          <h1>GPS <span>FOR RESEARCHER</span></h1>
+        </div>
+        <div class="text">
+          Track your trails and search your path with RTICS.<br />
+          Find out where you came from,<br />
+          where you are, and where to go.<br />
+        </div>
+        <div id="gpsbutton" class="button" style="margin-top: 40px;">
+          <span>
+            PRODUCT
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section id="customers" style="margin-top: 240px;">
+      <div>
+        <h1>CUSTOMERS</h1>
+      </div>
+      <div style="margin-top: 22px;">
+        <h3>
+          RTICS is a network data management tool and a discovery tool for
+          research groups.
+        </h3>
+      </div>
+      <div id="customercolumn" style="margin-top: 66px;">
+        <div class="h2">
+          <div class="customercard">
+            <h2>Organize and track<br />your research<br />performance</h2>
+          </div>
+          <div class="customercard" style="top: 0; bottom: 0; margin: auto;">
+            <h2>Build and shape your<br />research network</h2>
+          </div>
+          <div class="customercard">
+            <h2>
+              Stay updated with<br />important or emerging<br />academic trend
+            </h2>
+          </div>
+        </div>
+        <div class="explain">
+          <div class="customercard">
+            <div class="text">
+              RTICS automatically organizes your<br />works and measures your
+              research<br />performances. <br /><br />
+              RTICS shows your past co-research<br />lists and their
+              performances.
+            </div>
+          </div>
+          <div class="customercard">
+            <div class="text">
+              RTICS shows your researcher network.
+              <br />
+              <br />
+              RTICS recommends you possible co-<br />researchers, and show how
+              their<br />research topics are similar to yours.
+              <br />
+              <br />
+              RTICS analyzes fields you are interested<br />in and recommends
+              important and<br />emerging topics.
+            </div>
+          </div>
+          <div class="customercard">
+            <div class="text">
+              RTICS analyzes academic fields and<br />shows academic trends and
+              provides<br />insights from analysis results.
+              <br />
+              <br />
+              RTICS tracks your researches and<br />shows your past research
+              trends.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="customerbuttons" style="margin-top: 240px;">
+        <div
+          id="customerbutton1"
+          class="button"
+          style="background-color: #a0a0a0;"
+        >
+          <span>
+            REQUEST PRODUCT
+          </span>
+        </div>
+        <div id="customerbutton2" class="button">
+          <span>
+            EXPLORE USE CASES
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section id="keyfeatures" style="margin-top: 650px;">
+      <div>
+        <h1>KEY FEATURES</h1>
+      </div>
+      <div id="keyfeatureslist">
+        <div class="keyfeaturescard">
+          <img src="img/manage your team.png" alt="manage team performance" />
+          <div class="text">
+            Manage your<br />
+            team performance
+          </div>
+        </div>
+        <div class="keyfeaturescard">
+          <img
+            src="img/manage your ind.png"
+            alt="manage individual performance"
+          />
+          <div class="text">
+            Manage your<br />
+            individual performance
+          </div>
+        </div>
+        <div class="keyfeaturescard">
+          <img
+            src="img/measure and track.png"
+            alt="measure citation impact"
+          />
+          <div class="text">
+            Measure and track your<br />
+            citation impact
+          </div>
+        </div>
+        <div class="keyfeaturescard">
+          <img src="img/find out your next.png" alt="find next co-researcher" />
+          <div class="text">
+            Find out your next<br />
+            co-researcher
+          </div>
+        </div>
+        <div class="keyfeaturescard">
+          <img src="img/track your.png" alt="track research performance" />
+          <div class="text">
+            Track your collaborative<br />
+            research performances
+          </div>
+        </div>
+        <div class="keyfeaturescard">
+          <img
+            src="img/see who is leadingArtboard 1@4x.png"
+            alt="see leading trends"
+          />
+          <div class="text">
+            See who is leading<br />
+            research trends
+          </div>
+        </div>
+        <div class="keyfeaturescard">
+          <img src="img/get hot.png" alt="get hot topics" />
+          <div class="text">
+            Get hot, important, emerging<br />
+            research topics curated to your needs
+          </div>
+        </div>
+        <div class="keyfeaturescard">
+          <img src="img/stayupdated.png" alt="stay updated" />
+          <div class="text">
+            Stay updated with recent<br />
+            research trends
+          </div>
+        </div>
+        <div class="keyfeaturescard">
+          <img src="img/see what funds.png" alt="see funds" />
+          <div class="text">
+            See what funds are<br />
+            investing to your field
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 자동 슬라이드 -->
+    <script>
+      var slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 3000); // Change image every 2 seconds
+      }
+    </script>
+    <footer>
+      <img src="img/logo_light.svg" alt="logo" />
+      <div id="footernav">
+        <span><a href="./aboutus.html">ABOUT US</a></span>
+        <span>PRODUCT</span>
+        <span><a href="./pricing.html">PRICING</a></span>
+        <span><a href="http://blog.rtics.link">BLOG</a></span>
+        <span><a href="./contact.html">CONTACT US</a></span>
+      </div>
+      <div id="copyright">
+        RTICS is a lab solution for research groups of more than one member.<br />
+        Every researcher in your group is required to subscribe to a single
+        license key.
+      </div>
+    </footer>
+  </body>
+</html>
