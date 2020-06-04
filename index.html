@@ -18,7 +18,7 @@
 
       /* Slideshow container */
       .slideshow-container {
-        max-width: 2000px;
+        width: 1080px;
         position: relative;
         margin: auto;
       }
@@ -108,12 +108,12 @@
       }
 
       .toptitle {
-        width: 826px;
+        width: 1080px;
         height: 262px;
       }
 
       section .top {
-        width: 549px;
+
         height: 49px;
         font-size: 16px;
         font-weight: normal;
@@ -158,43 +158,42 @@
         z-index: -1;
       }
 
+
       .button {
-        width: 258px;
-        height: 48px;
+        color: white;
         border-radius: 24px;
         background-color: #5852ff;
-        display: inline-block;
-      }
-
-      .button span {
-        color: white;
-        top: 0;
-        bottom: 0;
-        /* margin: auto; */
-        line-height: 48px;
+        padding: 24px 32px;
+        padding-top:18px;
+        margin-top: 54px;
         display: inline-block;
         font-family: Helvetica;
-        width: 263px;
         height: 48px;
         font-size: 15px;
         font-weight: bold;
-        font-stretch: normal;
         text-align: center;
         vertical-align: middle;
-        font-style: normal;
         letter-spacing: 0.51px;
       }
 
       #gpstext {
-        position: absolute;
-        right: 250px;
-        top: 780px;
+        position: relative;
+        width: 500px;
+        float: right;
+        display: inlie-block;
+
       }
 
       #gps img {
         display: inline-block;
         width: 400px;
         height: auto;
+      }
+
+      #gps {
+        width: 1100px;
+        height: 400px;
+        margin: 0 auto;
       }
 
       #gps h1 {
@@ -305,6 +304,11 @@
         color: #383a3f;
       }
 
+      #keyfeatureslist {
+        width: 1200px;
+        margin: 0 auto;
+      }
+
       .keyfeaturescard {
         width: 32%;
         height: auto;
@@ -314,9 +318,28 @@
       }
 
       .keyfeaturescard img {
-        width: 50%;
+        width: 190px;
         height: auto;
       }
+
+      .toptexts {
+        display: inlie-block;
+        width: 600px;
+      }
+
+      .slide-img {
+        position: absolute;
+        top:200px;
+        right:200px;
+        display: inlie-block;
+        height: 300px;
+        width: 300px;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+
+
     </style>
   </head>
   <body>
@@ -355,12 +378,8 @@
               Find out where you came from, where you are, and where to go.
             </div>
           </div>
-          <img src="img/top-track.png" alt="track your performance" />
-          <div id="topbutton" class="button" style="margin-top: 54px;">
-            <span>
-              About Us
-            </span>
-          </div>
+          <div class="slide-img" style="background-image: url(img/top-track.png);" alt="track your performance"></div>
+          <div id="topbutton" class="button" >About Us</div>
         </section>
       </div>
 
@@ -382,12 +401,8 @@
               of research analytics.
             </div>
           </div>
-          <img src="img/top-discover.png" alt="discover academic world" />
-          <div id="topbutton" class="button" style="margin-top: 54px;">
-            <span>
-              PRODUCT KEY FEATURES
-            </span>
-          </div>
+          <div class="slide-img" style="background-image: url(img/top-discover.png);" alt="discover academic world" ></div>
+          <div id="topbutton" class="button"> PRODUCT KEY FEATURES </div>
         </section>
       </div>
     </div>
@@ -433,8 +448,10 @@
       }
     </script>
 
-    <section id="gps" style="margin-top: 321px;">
-      <img src="img/GPS.png" alt="gps for researchers" />
+    <section style="width: 100%;height: 800px;">
+      <div id="gps" style="margin-top: 321px;">
+      <img src="img/GPS.png" alt="gps for researchers">
+
       <div id="gpstext">
         <div>
           <h1>GPS <span>FOR RESEARCHER</span></h1>
@@ -450,9 +467,10 @@
           </span>
         </div>
       </div>
+    </div>
     </section>
 
-    <section id="customers" style="margin-top: 240px;">
+    <section id="customers" style=" height: 800px;">
       <div>
         <h1>CUSTOMERS</h1>
       </div>
@@ -462,7 +480,7 @@
           research groups.
         </h3>
       </div>
-      <div id="customercolumn" style="margin-top: 66px;">
+      <div id="customercolumn" style="margin-top: 66px; height: 380px;">
         <div class="h2">
           <div class="customercard">
             <h2>Organize and track<br />your research<br />performance</h2>
@@ -510,7 +528,7 @@
           </div>
         </div>
       </div>
-      <div id="customerbuttons" style="margin-top: 240px;">
+      <div id="customerbuttons" >
         <div
           id="customerbutton1"
           class="button"
@@ -528,7 +546,7 @@
       </div>
     </section>
 
-    <section id="keyfeatures" style="margin-top: 650px;">
+    <section id="keyfeatures" style="height: 1400px;">
       <div>
         <h1>KEY FEATURES</h1>
       </div>
