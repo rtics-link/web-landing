@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./index.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/index.css">
   <title>Pricing</title>
   <style>
     input {
@@ -230,18 +231,19 @@
 </head>
 
 <body>
-  <header>
-    <a href="">
-      <img src="./img/logo.svg" alt="RTICS Logo" id="logo">
-    </a>
-    <nav>
-      <a href="">ABOUT US</a>
-      <a href="">PRODUCT</a>
-      <a href="">PRICING</a>
-      <a href="">BLOG</a>
-      <a href="">CONTACT US</a>
-    </nav>
-  </header>
+    <header>
+      <a href="" style="float:left; margin-left: 70px;">
+        <img src="./img/logo.svg" alt="RTICS Logo" id="logo" />
+      </a>
+      <nav>
+        <a class='hn' href="./contact.html">CONTACT US</a>        
+        <a class='hn' href="http://blog.rtics.link">BLOG</a>
+        <a class='hn' href="./pricing.html">PRICING</a>
+        <a class='hn' href="#customers">PRODUCT</a>
+        <a class='hn' href="#gps">ABOUT US</a>              
+      </nav>
+    </header>
+
   <div>
     <div id="title">
       <div class="big">REQUEST <span class="huge">RTICS</span> PRODUCT</div>
@@ -262,24 +264,22 @@
     <div id="checkboxes">
       <div class="checkbox">
         <input type="checkbox" name="chk_info" value="CSS" checked="checked">
-        <div class="cb"></div>
+        <span class="material-icons" style="font-size:35px; color:#5852ff; vertical-align: middle; margin-right:15px;">done</span>
         For research groups of more than one researcher
       </div>
       <div class="checkbox">
         <input type="checkbox" name="chk_info" value="CSS" checked="checked">
-        <div class="cb"></div>
-
+        <span class="material-icons" style="font-size:35px; color:#5852ff; vertical-align: middle; margin-right:15px;">done</span>
         Research impact analysis tool
       </div>
       <div class="checkbox">
         <input type="checkbox" name="chk_info" value="CSS" checked="checked">
-        <div class="cb"></div>
-
+        <span class="material-icons" style="font-size:35px; color:#5852ff; vertical-align: middle; margin-right:15px;">done</span>
         Stay updated with the most trending research insights
       </div>
       <div class="checkbox">
         <input type="checkbox" name="chk_info" value="CSS" checked="checked">
-        <div class="cb"></div>
+        <span class="material-icons" style="font-size:35px; color:#5852ff; vertical-align: middle; margin-right:15px;">done</span>
         One year license per individual researcher
       </div>
     </div>
@@ -311,9 +311,6 @@
     <article>
     </article>
   </section>
-  <footer>
-    <div id="footershadow"></div>
-  </footer>
 </body>
 
 </html>
