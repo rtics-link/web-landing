@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="css/index.css">
   <title>About Us</title>
   <!-- Hotjar Tracking Code for rtics.link -->
   <script>
@@ -121,23 +121,19 @@
 </head>
 
 <body>
-  <header>
-    <a href="">
-      <img src="./img/logo.svg" alt="RTICS Logo" id="logo">
-    </a>
-    <nav>
-      <a href="">ABOUT US</a>
-      <a href="">PRODUCT</a>
-      <a href="">PRICING</a>
-      <a href="">BLOG</a>
-      <a href="">CONTACT US</a>
-    </nav>
-  </header>
-  <section>
-    <article>
-    </article>
-  </section>
-  <div>
+    <header>
+      <a href="" style="float:left; margin-left: 70px;">
+        <img src="./img/logo.svg" alt="RTICS Logo" id="logo" />
+      </a>
+      <nav>
+        <a class='hn' href="./contact.html">CONTACT US</a>        
+        <a class='hn' href="http://blog.rtics.link">BLOG</a>
+        <a class='hn' href="./pricing.html">PRICING</a>
+        <a class='hn' href="#customers">PRODUCT</a>
+        <a class='hn' href="#gps">ABOUT US</a>              
+      </nav>
+    </header>
+  <div style="height:800px;">
     <div class="big">
       CONTACT US
     </div>
@@ -146,9 +142,6 @@
     <div class="rectangle" id="text"></div>
     <div id="button"><span>SUBMIT</span></div>
   </div>
-  <footer>
-    <div id="footershadow"></div>
-  </footer>
 </body>
 
 </html>

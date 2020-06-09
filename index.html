@@ -190,6 +190,7 @@
 
 
       .button {
+        text-decoration: none;
         color: white;
         border-radius: 24px;
         background-color: #5852ff;
@@ -382,8 +383,8 @@
         <a class='hn' href="./contact.html">CONTACT US</a>        
         <a class='hn' href="http://blog.rtics.link">BLOG</a>
         <a class='hn' href="./pricing.html">PRICING</a>
-        <a class='hn' href="">PRODUCT</a>
-        <a class='hn' href="./aboutus.html">ABOUT US</a>              
+        <a class='hn' href="#customers">PRODUCT</a>
+        <a class='hn' href="#gps">ABOUT US</a>              
       </nav>
     </header>
 
@@ -409,7 +410,7 @@
             </div>
           </div>
           <div class="slide-img" style="background-image: url(img/top-track.png);" alt="track your performance"></div>
-          <div id="topbutton" class="button" >About Us</div>
+          <a id="topbutton" class="button" href="#gps">ABOUT US</a>
         </section>
       </div>
 
@@ -432,7 +433,7 @@
             </div>
           </div>
           <div class="slide-img" style="background-image: url(img/top-discover.png);" alt="discover academic world" ></div>
-          <div id="topbutton" class="button"> PRODUCT KEY FEATURES </div>
+          <a id="topbutton" class="button" href="#keyfeatures"> PRODUCT KEY FEATURES </a>
         </section>
       </div>
     </div>
@@ -676,10 +677,12 @@
       }
     </script>
     <footer>
+      <div style="width:100%">
+      <div id="footer_cont">
       <img src="img/logo_light.svg" alt="logo" />
       <div id="footernav">
-        <span><a href="./aboutus.html">ABOUT US</a></span>
-        <span>PRODUCT</span>
+        <span><a href="#gps">ABOUT US</a></span>
+        <span><a href="" >PRODUCT</a></span>
         <span><a href="./pricing.html">PRICING</a></span>
         <span><a href="http://blog.rtics.link">BLOG</a></span>
         <span><a href="./contact.html">CONTACT US</a></span>
@@ -689,6 +692,8 @@
         Every researcher in your group is required to subscribe to a single
         license key.
       </div>
+    </div>
+  </div>
     </footer>
   </body>
 </html>

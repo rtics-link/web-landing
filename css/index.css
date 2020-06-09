@@ -69,7 +69,7 @@ article {
 }
 
 a {
-  color: #333333;
+  text-decoration: none;
 }
 
 footer {
@@ -90,6 +90,14 @@ footer img {
   display: inline-block;
 }
 
+#footer_cont{
+  width:1400px;
+  height: 200px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
 #footernav {
   font-size: 14px;
   position: absolute;
@@ -101,7 +109,10 @@ footer img {
   width: auto;
 }
 
-#footernav span {
+#footernav span a{
+  color: white;
+  display: inline-block;
+  min-width: 90px;
   margin-right: 56px;
 }
 
