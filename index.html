@@ -19,6 +19,7 @@
       /* Slideshow container */
       .slideshow-container {
         width: 1080px;
+        padding-left: 50px;
         position: relative;
         margin: auto;
       }
@@ -99,6 +100,7 @@
         line-height: 1.44;
         letter-spacing: -0.45px;
         color: #383a3f;
+        z-index: 5;
       }
 
       h1,
@@ -112,8 +114,8 @@
         height: 262px;
       }
 
-      section .top {
-
+      .top {
+        padding-top:65px;
         height: 49px;
         font-size: 16px;
         font-weight: normal;
@@ -165,7 +167,7 @@
         border-radius: 24px;
         background-color: #5852ff;
         padding: 24px 32px;
-        padding-top:18px;
+        padding-top:15px;
         margin-top: 54px;
         display: inline-block;
         font-family: Helvetica;
@@ -254,13 +256,23 @@
 
       .customercard {
         display: inline-block;
-        width: 320px;
+        width: 300px;
+        margin-right: 75px;
         height: auto;
         text-align: left;
         position: relative;
       }
 
-      .customercard h2 {
+      .cmcard {
+        display: inline-block;
+        width: 320px;
+        height: 350px;
+        position: absolute;
+        top: 50px;
+        text-align: left;
+      }
+
+      .cmcard h2 {
         top: 0;
         bottom: 0;
         margin: auto;
@@ -273,9 +285,16 @@
         color: #383a3f;
       }
 
-      .customercard .text {
-        position: absolute;
-        top: 0;
+      .cmcard .text{
+        margin-top: 36px;
+          font-family: NotoSans;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.56;
+  letter-spacing: 0.55px;
+  color: #383a3f;
       }
 
       #customerbuttons {
@@ -324,20 +343,24 @@
       }
 
       .toptexts {
-        display: inlie-block;
-        width: 600px;
+        display: inline-block;
+        z-index: 3;
+        word-break: break-word;
+        width: 550px;
       }
 
       .slide-img {
         position: absolute;
-        top:200px;
-        right:200px;
-        display: inlie-block;
-        height: 300px;
-        width: 300px;
+        top:0px;
+        right:0;
+        display: inline-block;
+        height: 450px;
+        width: 450px;
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
+        z-index: 1;
+        overflow: hidden;
       }
 
 
@@ -346,7 +369,7 @@
   <body>
     <!-- header -->
     <header>
-      <a href="" style="float:left; margin-left: 70px;">
+      <a href="./index.html" style="float:left; margin-left: 70px;">
         <img src="./img/logo.svg" alt="RTICS Logo" id="logo" />
       </a>
       <nav>
@@ -450,7 +473,7 @@
     </script>
 
     <section style="width: 100%;height: 800px;">
-      <div id="gps" style="margin-top: 321px;">
+      <div id="gps" style="margin-top: 221px; padding-top: 100px;">
       <img src="img/GPS.png" alt="gps for researchers">
 
       <div id="gpstext">
@@ -481,43 +504,32 @@
           research groups.
         </h3>
       </div>
-      <div id="customercolumn" style="margin-top: 66px; height: 380px;">
-        <div class="h2">
-          <div class="customercard">
-            <h2>Organize and track<br />your research<br />performance</h2>
-          </div>
-          <div class="customercard" style="top: 0; bottom: 0; margin: auto;">
-            <h2>Build and shape your<br />research network</h2>
-          </div>
-          <div class="customercard">
-            <h2>
-              Stay updated with<br />important or emerging<br />academic trend
-            </h2>
-          </div>
-        </div>
-        <div class="explain">
-          <div class="customercard">
-            <div class="text">
+      <div id="customercolumn" style="position:relative; height: 380px; width: 1200px; margin: 0 auto;">
+          <div class="cmcard" style="left:75px;">
+            <span><h2>Organize and track<br />your research<br />performance</h2></span>
+              <div class="text">
               RTICS automatically organizes your<br />works and measures your
               research<br />performances. <br /><br />
               RTICS shows your past co-research<br />lists and their
               performances.
-            </div>
+              </div>
           </div>
-          <div class="customercard">
-            <div class="text">
-              RTICS shows your researcher network.
-              <br />
-              <br />
-              RTICS recommends you possible co-<br />researchers, and show how
-              their<br />research topics are similar to yours.
-              <br />
-              <br />
-              RTICS analyzes fields you are interested<br />in and recommends
-              important and<br />emerging topics.
-            </div>
+          <div class="cmcard" style="right: 400px;">
+             <span><h2>Build and shape your<br />research network</h2></span>
+              <div class="text">
+                RTICS shows your researcher network.
+                <br />
+                <br />
+                RTICS recommends you possible co-<br />researchers, and show how
+                their<br />research topics are similar to yours.
+                <br />
+                <br />
+                RTICS analyzes fields you are interested<br />in and recommends
+                important and<br />emerging topics.
+              </div>
           </div>
-          <div class="customercard">
+          <div class="cmcard" style="right:-25px;">
+            <span><h2>Stay updated with<br />important or emerging<br />academic trend</h2></span>
             <div class="text">
               RTICS analyzes academic fields and<br />shows academic trends and
               provides<br />insights from analysis results.
@@ -525,7 +537,7 @@
               <br />
               RTICS tracks your researches and<br />shows your past research
               trends.
-            </div>
+            </div>            
           </div>
         </div>
       </div>
